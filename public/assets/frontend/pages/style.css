@@ -1,0 +1,1708 @@
+@charset "utf-8";
+/********************************************************/
+/* ページ共通のCSS                                      */
+/********************************************************/
+/*
+■CSSの優先度
+優先度を上げる場合には、「;」の前に「!important」を記入
+
+■MacIE5.xは読まないようにする場合(その他ブラウザは読む)
+/※ \※/
+p { color:#FFFFFF; }
+/※ ※/
+
+■IEのみCSSを当てる場合の例
+p { _color:#FFFFFF; };
+*/
+/********************************************************/
+/* 全体の初期化（ブラウザ依存を吸収）                   */
+/********************************************************/* 
+
+{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	margin:0px;
+	padding:0px;
+}
+
+        /* Hack For MacIE*/
+        /* {letter-spacing:1px;}*/
+        /* Hack For MacIE*/
+
+body{
+
+        margin:0px;
+　　　　padding: 0px;
+	text-align:center;
+        color:#444444;
+	font-weight:normal;
+	font-family:'メイリオ','Meiryo', 'MS Pゴシック',Verdana,Arial,sans-serif;
+	background:#ffffff;
+	_word-break:break-all;	/* IE6用ハック 長いURL折り返し対策 */
+
+}
+
+
+h1 {
+        font-size: 13px;
+	text-align:left;
+}
+
+h2 {
+
+        margin-left:10px;
+        margin-right:10px;
+        margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px 5px;
+	color:rgba(0,153,204,1.2);
+	font-size: 15px;
+	text-align:center;
+        font-family:sans-serif;
+ 
+}
+
+h3  {
+
+        margin-left:10px;
+        margin-right:10px;
+        margin-top: 23px;
+	margin-bottom: 25px;
+	padding: 5px 5px;
+	color: #2e2e2e;
+	font-size: 20px;
+	text-align:left;
+        border-bottom: 2px solid #ffa500;
+        font-family:sans-serif;
+
+
+}
+
+
+.text_1 {
+
+       font-size: 28px;
+
+}
+.text_2 {
+       font-size: 28px;
+       display:inline-block;
+      
+}
+
+.text_3 {
+
+       font-size: 16px;
+
+}
+.text_4 {
+       font-size: 16px;
+       display:inline-block;
+      
+}
+
+*:first-child+html body{
+　word-break:break-all;		/* IE7用ハック 長いURL折り返し対策 */
+}
+
+li{
+	/*list-style-position:inside; IE は幅が変わるのでコメント */
+	line-height:1.5em;
+	list-style:none;
+}
+
+/*
+li{
+	line-height:1.0em;
+	list-style:none;
+}
+*/
+
+textarea{
+
+	font-family:"メイリオ","sans-serif","ＭＳ Ｐゴシック", Hiragino Kaku Gothic Pro, Arial, Helvetica,!important;
+}
+
+
+
+
+table {
+
+        border-collapse:collapse;
+        margin-left:auto;
+        margin-right:auto;
+}
+
+table th,table td {
+
+        padding:10px 10px;
+        text-align:left;
+        font-size:13px;
+        font-color:#ffffff;
+        width:100%;
+        border:solid 1px #333333;
+
+}
+
+
+table th {
+
+background:#eeeeee;
+
+}
+
+
+.sp_dsp { display:block; }    /*phoneのみ表示*/
+
+
+/***************************************ヘッダー********************************************/
+
+header {
+
+z-index: 1;
+position: fixed;
+top:0px;
+left:0px;
+width: 100%;
+color: white;
+background:rgba(0,153,204,0.9);
+
+
+height:90px;
+line-height:px;
+text-align:center;
+
+//下線部陰影線
+/*border-bottom:1px solid rgba(0,0,0,0.5);*/
+/*box-shadow:0 1px 0 rgba(0,0,0,0.1);*/
+
+
+border-top: 4px solid #f6a72a;	/*上の線の幅、線種、色*/
+
+}
+
+
+
+/*inner共通
+----------------------------------------------------------------------------------------------*/
+.inner {
+	max-width: 1000px;	/*サイトの最大幅*/
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+
+
+/*ヘッダー（ロゴが入った最上段のブロック）
+---------------------------------------------------------------------------------------------*/
+/*ヘッダーブロック*/
+
+
+header .inner {
+	height: 90px;	/*高さ*/
+}
+
+#logo {
+
+       float: left;	           /*左に回り込み*/
+       margin-top:  16px;          /* 空白指定 */
+       width: 140px;	           /*ロゴの幅*/
+
+}
+
+.font_logo {
+       float: left;	           /*左に回り込み*/
+       font-family:sans-serif; /* フォントの種類指定 */
+       font-size:  16px;          /* 文字サイズ指定 */
+}
+
+
+/*ヘッダー右側の電話番号ブロック
+----------------------------------------------------------------------------------------------*/
+/*ブロック全体*/
+#contact {
+	float: right;		/*右に回り込み*/
+	margin-top: 18px;	/*ブロックの上にあける余白。上下のバランスをここで調整して下さい。*/
+	width: 230px;		/*ブロック幅 200px*/
+	border-radius: 6px;	/*角丸のサイズ*/
+	padding: 5px;		/*ボックス内の余白*/
+	border: 1px solid #dcdcdc;	/*枠線の幅、線種、色*/
+	text-align: center;	/*文字をセンタリング*/
+        font-family:sans-serif;
+}
+/*TEL*/
+.tel {
+	letter-spacing: 0.2em;	/*文字間隔を広くする設定。通常がいいならこの行削除。*/
+	font-size: 15px;		/*文字サイズを大きく*/
+        font-color:#333333;
+      
+}
+
+.tel a{
+         font-size:15px;
+         font-weight:bold;
+         color:#ffa500;
+         text-decoration:none;
+        
+}
+
+/*TELの受付時間の小文字部分*/
+.tel span {
+	 font-size: 10px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+ 
+}
+
+
+
+.catchtitle_sp {
+
+          width:100%;
+          margin:auto;   /*中央寄せ*/
+
+          background-image:url("/images/frontend/img/head_main_3.png");
+          background-repeat:no-repeat;
+          background-size:cover;   /*背景画像サイズ*/
+
+          color:#ffffff;     /*文字カラー*/
+          line-height:1.5em;
+          font-size:1.3rem;
+          text-align:center; 
+          font-weight:900;
+          font-family:sans-serif;
+          display:block;
+}
+
+
+.catchtitle_pc { display:none;}
+
+
+#catch_1 ul{
+
+         list-style-type:none;
+         text-align:center;
+}
+
+#catch_1 ul li{
+
+         display:inline-block;
+         width:25% ;
+         padding:2px;
+         margin:2px;
+         border: 1px solid #ffff00;	/*枠線の幅、線種、色*/
+
+}
+
+
+#catch_1 ul li p{
+         color:#ffffff;     /*文字カラー*/
+         font-size: 12px;	/*文字サイズ*/
+         padding: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.title {
+line-height:1.5em;
+font-size:12px;
+color:#333333;
+text-align:left; 
+
+}
+
+#satei_coment {
+
+transform:rotate(40deg);
+transform:translate(450px,100px);
+
+-moz-transform:rotate(10deg);
+-webkit-transform:rotate(10deg);
+
+font-size:25px;
+color:red;
+float: left;		/*左に回り込み*/
+width:100%;
+font-family:sans-serif;
+
+}
+
+
+#satei {
+
+float: right;		/*右に回り込み*/
+width:100%;
+
+}
+
+
+#satei img {
+
+text-align:center; 
+width:40%;
+float: right;	
+
+} 
+
+
+#how_satei {
+
+        margin-top: 0px;
+	margin-bottom: 30px;
+	padding: 5px 5px;
+	color: #ffffff;
+        background-color:#ffa500;
+	font-size: 130%;
+	text-align:left;
+        /*border-bottom: 2px solid #ffa500;*/
+        clear:both;
+        font-family:sans-serif;	
+}
+
+/***************************************電話問合Btn for Phone *******************************************/
+
+.contact_2 { 
+    margin: 15px 15px;	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 80%;		                /*ブロック幅 */
+	border-radius: 6px;	                /*角丸のサイズ*/
+	padding: 15px;		                /*ボックス内の余白*/
+	border: 2px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	                /*文字をセンタリング*/
+    font-family:sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+
+    background-image:url(/images/frontend/img/satei_1.png);
+    background-position:right bottom;
+    background-repeat:no-repeat;
+    background-size:40% auto;
+
+}
+
+#tel_2 {
+
+          line-height:1.5em;
+          font-size:12px;
+          color:#333333;
+          text-align:center; 
+          font-family:sans-serif;
+}
+
+#tel_2 p{
+
+          line-height:2.5em;
+          font-size:16px;
+          color:#333333;
+          text-align:center; 
+          font-family:sans-serif;
+          padding: 5px;		/*ボックス内の余白*/
+}
+
+
+#tel_2 a{
+
+          font-size:25px;
+          color:rgba(0,153,204,0.9);
+          font-family:sans-serif;
+}
+
+#tel_2 span {
+
+	 font-size: 12px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 5px;		/*ボックス内の余白*/
+        
+}
+
+/********************************************************************************************************/
+/************************************メール問合せ　Btn for Phone*****************************************/
+
+
+.contact_mail {
+	margin: 0px;	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 80%;		        /*ブロック幅 */
+	border-radius: 6px;	        /*角丸のサイズ*/
+	padding: 10px ;		        /*ボックス内の余白*/
+	border: 2px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	        /*文字をセンタリング*/
+        font-family:sans-serif;
+        margin-left:auto;
+        margin-right:auto;
+
+        background-image:url(/images/frontend/img/mail_1.png);
+        background-position:left 5px center;
+        background-repeat:no-repeat;
+        background-size:15% auto;
+}
+
+
+
+#mail {
+
+        line-height:1.5em;
+        font-size:12px;
+        color:#333333;
+        text-align:center; 
+        font-family:sans-serif;
+}
+
+#mail p{
+          line-height:2.5em;
+          font-size:16px;
+          text-align:center; 
+          color:#333333;
+          font-family:sans-serif;
+          padding: 5px;		/*ボックス内の余白*/
+}
+
+
+
+
+#mail a{
+
+         font-size:20px;
+         color:rgba(0,153,204,0.9);
+         font-family:sans-serif;
+}
+
+#mail span {
+	 font-size: 16px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 10px;		/*ボックス内の余白*/
+}
+
+
+
+
+/********************************************************************************************************/
+/**************************************LINE問合せ　Btn for Phone*****************************************/
+
+
+.contact_line {
+	margin: 0px;	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 80%;		        /*ブロック幅 */
+	border-radius: 6px;	        /*角丸のサイズ*/
+	padding: 10px ;		        /*ボックス内の余白*/
+	border: 2px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	        /*文字をセンタリング*/
+        font-family:sans-serif;
+        margin-left:auto;
+        margin-right:auto;
+
+        background-image:url(img/line_1.png);
+        background-position:left 5px center;
+        background-repeat:no-repeat;
+        background-size:15% auto;
+}
+
+
+
+#line {
+
+        line-height:1.5em;
+        font-size:12px;
+        color:#333333;
+        text-align:center; 
+        font-family:sans-serif;
+}
+
+#line p{
+          line-height:2.5em;
+          font-size:16px;
+          text-align:center; 
+          color:#333333;
+          font-family:sans-serif;
+          padding: 5px;		/*ボックス内の余白*/
+}
+
+
+
+
+#line a{
+
+         font-size:30px;
+         color:rgba(0,153,204,0.9);
+         font-family:sans-serif;
+}
+
+#line span {
+	 font-size: 16px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 10px;		/*ボックス内の余白*/
+}
+
+
+
+
+/*****************************************************************************************************/
+/******************************かんたん入力フォーム　Btn for Phone************************************/
+
+
+.contact_form {
+	margin: 0px;	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 80%;		        /*ブロック幅 */
+	border-radius: 6px;	        /*角丸のサイズ*/
+	padding: 10px ;		        /*ボックス内の余白*/
+	border: 2px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	        /*文字をセンタリング*/
+        font-family:sans-serif;
+        margin-left:auto;
+        margin-right:auto;
+
+        background-image:url(img/form_1.png);
+        background-position:left 5px center;
+        background-repeat:no-repeat;
+        background-size:15% auto;
+}
+
+
+
+#form_1 {
+
+        line-height:1.5em;
+        font-size:12px;
+        color:#333333;
+        text-align:center; 
+        font-family:sans-serif;
+}
+
+#form_1 p{
+          line-height:2.5em;
+          font-size:14px;
+          text-align:center; 
+          color:#333333;
+          font-family:sans-serif;
+          padding: 5px;		/*ボックス内の余白*/
+}
+
+
+
+
+#form_1 a{
+
+         font-size:20px;
+         color:rgba(0,153,204,0.9);
+         font-family:sans-serif;
+}
+
+#form_1 span {
+	 font-size: 15px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 10px;		/*ボックス内の余白*/
+}
+
+
+
+
+/*****************************************************************************************************/
+
+
+
+
+#content {
+
+          /*
+          align:center;
+          position:absolute;
+          */
+
+
+          /*サイト全体を中央寄せ*/
+           margin-left:auto;
+           margin-right:auto;
+           text-align:left;
+
+
+           background:white;
+           width:100%;
+           height:100%;
+           top:0;
+           left:0;
+
+           padding-top:90px;
+           padding-left:0px;
+           padding-right:0px;
+
+           /*
+           overflow: scroll;
+           */
+          -webkit-overflow-scrolling:touch;
+      
+
+}
+
+
+
+.point_1 {
+        
+       /* margin: 20px 10px;*/	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 80%;                             /*ブロック幅 */
+        height:300px;
+	border-radius: 6px;	                /*角丸のサイズ*/
+	padding: 5px;		                /*ボックス内の余白*/
+	border: 2px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	                /*文字をセンタリング*/
+        font-family:sans-serif;
+
+        margin-top:10px;
+        margin-bottom:5px;
+        margin-left:auto;
+        margin-right:auto;
+      
+}
+
+
+.point_1 img{
+
+          text-align:center;
+}
+
+
+
+.point_1 p{
+
+　　　　　 font-size: 20px;	/*文字サイズ*/
+           line-height:155em;
+           color:#333333;
+           text-align:center; 
+           font-family:sans-serif;
+}
+
+
+.point_1 span {
+	 font-size: 12px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 10px;		/*ボックス内の余白*/
+         text-align:left; 
+}
+
+
+
+
+
+
+#point ul{
+
+         list-style-type:none;
+         text-align:center;
+}
+
+#point ul li{
+
+         display:inline-block;
+         width:80% ;
+         padding:5px;
+         margin:10px;
+         border: 3px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+
+}
+
+#point ul li img{
+
+         width:50%;
+
+}
+
+
+#point ul li p{
+
+         font-size: 25px;	/*文字サイズ*/
+         padding: 5px;
+}
+
+#point ul li span{
+
+         font-size: 18px;	/*文字サイズ*/
+         background:linear-gradient(transparent 50%,#ffc037 50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#kaitori ul{
+
+         list-style-type:none;
+         text-align:center;
+}
+
+#kaitori ul li{
+
+         display:inline-block;
+         width:80% ;
+         padding:5px;
+         margin:10px;
+         border: 3px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+
+}
+
+#kaitori ul li img{
+
+         width:90%;
+
+}
+
+
+#kaitori ul li p{
+
+         font-size: 20px;	/*文字サイズ*/
+         padding: 5px;
+}
+
+#kaitori ul li span{
+
+         font-size: 18px;	/*文字サイズ*/
+         background:linear-gradient(transparent 50%,#ffc037 50%);
+}
+
+
+
+/*****************************************************************************************************************************************************/
+/* for   PC   satrt                                                                                                                                  */
+/*****************************************************************************************************************************************************/
+
+
+@media screen and (min-width:1040px) {
+
+
+.sp_dsp { display:none; }   /*phoneのみ表示*/
+
+
+
+
+h1 {
+
+        font-size: 13px;
+	text-align:left;
+        margin-left:0px
+}
+
+
+
+
+h2 {
+
+        margin-left:10px;
+        margin-right:10px; 
+        margin-top: 25px;
+	margin-bottom: 25px;
+	padding: 5px 5px;
+	color: #2e2e2e;
+	font-size: 25px;
+	text-align:left;
+        border-bottom: 2px solid #ffa500;
+        font-family:sans-serif;
+
+
+}
+
+
+
+h3  {
+
+        margin-left:10px;
+        margin-right:10px;
+        
+        margin-top: 25px;
+	margin-bottom: 25px;
+	padding: 5px 5px;
+	color: #2e2e2e;
+	font-size: 25px;
+	text-align:left;
+        border-bottom: 2px solid #ffa500;
+        font-family:sans-serif;
+
+
+}
+
+
+
+
+
+.text_1 {
+
+       font-size: 30px;
+
+}
+.text_2 {
+       font-size: 30px;
+       display:inline-block;
+      
+}
+
+.text_3 {
+
+       font-size: 18px;
+
+}
+.text_4 {
+       font-size: 18px;
+       display:inline-block;
+      
+}
+
+
+
+
+header {
+
+       z-index: 1;
+       position: fixed;
+       top:0px;
+       left:0px;
+       width: 100%;
+       color: white;
+       background:rgba(0,153,204,0.9);
+
+       height:100px;
+       line-height:px;
+       text-align:center;
+
+}
+
+
+/*inner共通
+---------------------------------------------------------------------------*/
+.inner {
+	max-width: 1000px;	/*サイトの最大幅*/
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+/*ヘッダー（ロゴが入った最上段のブロック）
+---------------------------------------------------------------------------*/
+/*ヘッダーブロック*/
+
+
+header .inner {
+	height: 90px;	/*高さ*/
+        width:80%;      /*幅*/
+}
+
+
+
+#logo {
+
+       float: left;	           /*左に回り込み*/
+       margin-top:  15px;          /* 空白指定 */
+       width: 300px;	           /*ロゴの幅*/
+     
+}
+
+.font_logo {
+        
+       font-family:sans-serif; /* フォントの種類指定 */
+       font-size:  25px;          /* 文字サイズ指定 */
+       
+}
+
+
+
+/*ヘッダー右側の電話番号ブロック
+---------------------------------------------------------------------------*/
+/*ブロック全体*/
+#contact {
+	float: right;		/*右に回り込み*/
+	margin-top: 19px;	/*ブロックの上にあける余白。上下のバランスをここで調整して下さい。*/
+	width: 250px;		/*ブロック幅*/
+	border-radius: 6px;	/*角丸のサイズ*/
+	padding: 5px;		/*ボックス内の余白*/
+	border: 1px solid #dcdcdc;	/*枠線の幅、線種、色*/
+	text-align: center;	/*文字をセンタリング*/
+}
+
+
+/*TEL*/
+.tel {
+	letter-spacing: 0.2em;	/*文字間隔を広くする設定。通常がいいならこの行削除。*/
+	font-size: 18px;		/*文字サイズを大きく*/
+        font-color:#333333;
+ 
+}
+
+.tel a{
+         font-size:18px;
+         font-weight:bold;
+         color:#ffa500;
+         text-decoration:none;
+}
+
+/*TELの受付時間の小文字部分*/
+.tel span {
+	font-size: 12px;	/*文字サイズを小さく*/
+	display: block;
+	letter-spacing: 0.1em;	/*文字間隔*/
+        font-color:#333333;
+}
+
+
+
+.catchtitle_pc {
+
+             width:100%;
+             height:534px;
+
+             background-image:url("img/head_main_1.png");
+             background-repeat:no-repeat;
+             background-size:cover;
+             color:#ffffff;       /*文字カラー*/
+             line-height:1.5em;
+             font-size:2.0rem;
+             text-align:center; 
+             font-weight:900;
+             font-family:sans-serif;
+             display:block;
+
+}
+
+.catchtitle_sp {  display:none; }
+
+
+#camp {
+
+         transform:rotate(-7deg);
+
+}
+
+
+
+#catch_1 ul{
+
+         list-style-type:none;
+         text-align:center;
+}
+
+#catch_1 ul li{
+
+         display:inline-block;
+         width:25% ;
+         padding:2px;
+         margin:2px;
+         border: 2px solid #ffff00;	/*枠線の幅、線種、色*/
+
+}
+
+
+#catch_1 ul li p{
+         color:#ffffff;     /*文字カラー*/
+         font-size: 25px;	/*文字サイズ*/
+         padding: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {width:100%;}
+
+footer {width:100%;}
+
+.header_left {padding-top:12px;}
+
+
+
+
+
+
+/****************************************電話問合Btn for PC*******************************************/
+
+
+.contact_2 {
+	margin: 0px;	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 50%;		        /*ブロック幅 */
+	border-radius: 6px;	        /*角丸のサイズ*/
+	padding: 10px ;		        /*ボックス内の余白*/
+	border: 2px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	        /*文字をセンタリング*/
+        font-family:sans-serif;
+        margin-left:auto;
+        margin-right:auto;
+
+        background-image:url(/images/frontend/img/satei_1.png);
+        background-position:right bottom;
+        background-repeat:no-repeat;
+        background-size:30% auto;
+}
+
+
+
+#tel_2 {
+
+        line-height:1.5em;
+        font-size:12px;
+        color:#333333;
+        text-align:center; 
+        font-family:sans-serif;
+}
+
+#tel_2 p{
+          line-height:2.5em;
+          font-size:20px;
+          text-align:center; 
+          color:#333333;
+          font-family:sans-serif;
+          padding: 5px;		/*ボックス内の余白*/
+}
+
+
+
+
+#tel_2 a{
+
+         font-size:30px;
+         color:rgba(0,153,204,0.9);
+         font-family:sans-serif;
+}
+
+#tel_2 span {
+	 font-size: 16px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 10px;		/*ボックス内の余白*/
+}
+
+
+
+
+/*****************************************************************************************************/
+/************************************メール問合せ　Btn for PC*****************************************/
+
+
+.contact_mail {
+	margin: 0px;	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 50%;		        /*ブロック幅 */
+	border-radius: 6px;	        /*角丸のサイズ*/
+	padding: 10px ;		        /*ボックス内の余白*/
+	border: 2px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	        /*文字をセンタリング*/
+        font-family:sans-serif;
+        margin-left:auto;
+        margin-right:auto;
+
+        background-image:url(/images/frontend/img/mail_1.png);
+        background-position:left 5px center;
+        background-repeat:no-repeat;
+        background-size:15% auto;
+}
+
+
+
+#mail {
+
+        line-height:1.5em;
+        font-size:12px;
+        color:#333333;
+        text-align:center; 
+        font-family:sans-serif;
+}
+
+#mail p{
+          line-height:2.5em;
+          font-size:20px;
+          text-align:center; 
+          color:#333333;
+          font-family:sans-serif;
+          padding: 5px;		/*ボックス内の余白*/
+}
+
+
+
+
+#mail a{
+
+         font-size:30px;
+         color:rgba(0,153,204,0.9);
+         font-family:sans-serif;
+}
+
+#mail span {
+	 font-size: 16px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 10px;		/*ボックス内の余白*/
+}
+
+
+
+
+/*****************************************************************************************************/
+/**************************************LINE問合せ　Btn for PC*****************************************/
+
+
+.contact_line {
+	margin: 0px;	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 50%;		        /*ブロック幅 */
+	border-radius: 6px;	        /*角丸のサイズ*/
+	padding: 10px ;		        /*ボックス内の余白*/
+	border: 2px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	        /*文字をセンタリング*/
+        font-family:sans-serif;
+        margin-left:auto;
+        margin-right:auto;
+
+        background-image:url(/images/frontend/img/line_1.png);
+        background-position:left 5px center;
+        background-repeat:no-repeat;
+        background-size:15% auto;
+}
+
+
+
+#line {
+
+        line-height:1.5em;
+        font-size:12px;
+        color:#333333;
+        text-align:center; 
+        font-family:sans-serif;
+}
+
+#line p{
+          line-height:2.5em;
+          font-size:20px;
+          text-align:center; 
+          color:#333333;
+          font-family:sans-serif;
+          padding: 5px;		/*ボックス内の余白*/
+}
+
+
+
+
+#line a{
+
+         font-size:30px;
+         color:rgba(0,153,204,0.9);
+         font-family:sans-serif;
+}
+
+#line span {
+	 font-size: 16px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 10px;		/*ボックス内の余白*/
+}
+
+
+
+
+/*****************************************************************************************************/
+/*******************************かんたん入力フォーム　Btn for PC**************************************/
+
+
+.contact_form {
+	margin: 0px;	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 50%;		        /*ブロック幅 */
+	border-radius: 6px;	        /*角丸のサイズ*/
+	padding: 10px ;		        /*ボックス内の余白*/
+	border: 2px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	        /*文字をセンタリング*/
+        font-family:sans-serif;
+        margin-left:auto;
+        margin-right:auto;
+
+        background-image:url(/images/frontend/img/form_1.png);
+        background-position:left 5px center;
+        background-repeat:no-repeat;
+        background-size:15% auto;
+}
+
+
+
+#form_1 {
+
+        line-height:1.5em;
+        font-size:12px;
+        color:#333333;
+        text-align:center; 
+        font-family:sans-serif;
+}
+
+#form_1 p{
+          line-height:2.5em;
+          font-size:20px;
+          text-align:center; 
+          color:#333333;
+          font-family:sans-serif;
+          padding: 5px;		/*ボックス内の余白*/
+}
+
+
+
+
+#form_1 a{
+
+         font-size:25px;
+         color:rgba(0,153,204,0.9);
+         font-family:sans-serif;
+}
+
+#form_1 span {
+	 font-size: 16px;	/*文字サイズを小さく*/
+	 display: block;
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 10px;		/*ボックス内の余白*/
+}
+
+
+
+
+/*****************************************************************************************************/
+
+
+
+
+
+#content {
+
+             /*
+              align:center;
+              position:absolute;
+              */
+
+  
+            /*サイト全体を中央寄せ*/
+            margin-left:auto;
+            margin-right:auto;
+            text-align:left;
+
+
+            background:white;
+            width:80%;
+            height:100%;
+            top:0;
+            left:0;
+
+            padding-top:100px;
+            padding-left:5px;
+            padding-right:5px;
+
+             /*
+             overflow: scroll;
+             */
+            -webkit-overflow-scrolling:touch;
+            text-align:center;
+
+}
+
+.point_1 {
+        
+        float: left;	
+        margin: 10px 10px;	                /*ブロックの上にあける余白。上下のバランスをここで調整*/
+	width: 30%;	                        /*ブロック幅 */
+        height:250px;                           /*130px*/
+	border-radius: 6px;	                /*角丸のサイズ*/
+	padding: 5px;		                /*ボックス内の余白*/
+	border: 3px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+	text-align: center;	                /*文字をセンタリング*/
+        font-family:sans-serif;
+
+      
+}
+
+
+.point_1 p{
+           font-size: 25px;	/*文字サイズ*/
+           line-height:1.5em;
+           color:#333333;
+           text-align:center; 
+           font-family:sans-serif;
+}
+
+
+.point_1 span {
+	 font-size: 15px;	/*文字サイズ*/
+	 /*display: block;*/
+	 letter-spacing: 0.1em;	/*文字間隔*/
+         font-color:#333333;
+         padding: 0px;		/*ボックス内の余白*/
+         text-align:left; 
+}
+
+
+
+
+
+
+
+
+
+#point ul{
+
+         list-style-type:none;
+         text-align:center;
+}
+
+#point ul li{
+
+         display:inline-block;
+         width:30% ;
+         padding:5px;
+         margin:10px;
+         border: 3px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+
+}
+
+#point ul li img{
+
+         width:70%;
+
+}
+
+
+#point ul li p{
+
+         font-size: 20px;	/*文字サイズ*/
+         padding: 5px;
+}
+
+#point ul li span{
+
+         font-size: 18px;	/*文字サイズ*/
+         background:linear-gradient(transparent 50%,#ffc037 50%);
+}
+
+
+
+
+
+
+
+
+
+#kaitori ul{
+
+         list-style-type:none;
+         text-align:center;
+}
+
+#kaitori ul li{
+
+         display:inline-block;
+         width:30%;
+         padding:5px;
+         margin:10px;
+         border: 3px solid rgba(0,153,204,0.9);	/*枠線の幅、線種、色*/
+
+}
+
+#kaitori ul li img{
+
+        width:90%;
+
+}
+
+
+#kaitori ul li p{
+
+         font-size: 20px;	/*文字サイズ*/
+         padding: 5px;
+}
+
+#kaitori ul li span{
+
+         font-size: 18px;	/*文字サイズ*/
+         background:linear-gradient(transparent 50%,#ffc037 50%);
+}
+
+
+}
+
+/*********************************************************************************************************************/
+/*                                                 for PC  end                                                       */
+/*********************************************************************************************************************/
+
+
+
+
+
+/******************タイトル・本文**********************/
+
+
+#title {
+
+/*border-left:solid 3px #ffa500;*/
+/*background-color:#ffa500;*/
+
+background-color:rgb(255,153,0);
+width:100%;
+padding:10px;
+text-align:left;
+font-size:large;
+color:#ffffff;
+
+}
+
+
+#sentence {
+
+padding: 50px;
+width:100%;
+
+text-align:left;
+font-size:100%;
+color:#333333;
+font-family:sans-serif;
+}
+
+
+
+#sentence_1 {
+
+        line-height:1.5em;
+        width:100%;
+        height:auto;
+        text-align:left;
+        font-size:100%;
+        color:#333333;
+        font-family:sans-serif;
+       /* background:rgba(0,153,204,0.6);*/
+        padding :30px 50px;
+        margin:auto;
+
+}
+
+
+/********************************************************/
+/* 文字装飾                                             */
+/********************************************************/
+/* 文字：通常（文字色はbodyで一括設定） */
+/*p{
+	font-size:85%;
+	line-height:1.7em;*/
+}
+
+/* 文字：リンク（文字色はここでで設定） */
+a{
+	color:#000000;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#ff0000;
+	text-decoration:none;
+}
+
+.red{
+	color:red;
+}
+
+
+
+/********************************************************/
+/* フッター                                             */
+/********************************************************/
+/* フッター全体 */
+
+footer {
+
+        text-align:center;
+        color:#ffffff;
+        font-size:80%;
+        height:70px;
+        /*border-top: 1px solid #333333;*/
+        background:rgba(0,153,204,0.9);
+   
+}
+
+
+footer a {
+
+       color:#ffffff;
+       text-decoration:none;
+       line-height:150%;
+
+}
+
+
+footer a:hover{
+
+	color:#ff8c00;
+
+}
+
+
+/********************************************************/
+/*査定申込フォーム                                      */
+/********************************************************/
+
+#center{ text-align:center;}
+
+#form {
+     
+       margin:10px;
+       padding:0px 0px;
+       /*
+       border:2px solid #d3d3d3;
+       border-radius: 3px;
+       */
+}
+
+
+
+input[type=text] {
+	padding: 5px 5px;
+	font-size: 100%;
+	border: 2px solid #cdcdcd;
+	border-radius: 3px;
+	background: #ddf0ff;
+        -webkit-appearance:none;
+
+
+}
+
+
+input[name=btn_confirm],
+input[name=btn_submit],
+input[name=btn_back] {
+/*
+	margin-top: 18px;
+	padding: 5px 20px;
+	font-size: 100%;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	border-radius: 1px;
+	box-shadow: 0 3px 0 #2887d1;
+	background: #ff0000;
+*/
+    -webkit-appearance:none;
+
+    postiton:relative;
+    display:inline-block;
+    padding:0.25em 0.5em;
+    text-decoration:none;
+    color:#fff;
+    background:#fd9535;
+    border-bottom:solid 2px #d27d00;
+    border-radius:4px;
+    box-shadow:inset 0 2px 0 rgba(255,255,255,0.2),0 2px 2px rgba(0,0,0,0.19);
+    font-size:18px;
+}
+
+input[name=back_top] {
+
+    -webkit-appearance:none;
+    
+    display:inline-block;
+    padding:0.25em 0.5em;
+    text-decoration:none;
+    color:#fff;
+    background:#668ad8;
+    border-bottom:solid 4px #627295;
+    border-radius:4px;
+    font-size:18px;
+
+}
+
+input[name=btn_back] {
+	margin-right: 20px;
+	box-shadow: 0 3px 0 #777;
+	background: #999;
+}
+
+.element_wrap {
+
+        /*font-size: 16px;*/
+
+	margin-bottom: 10px;
+	padding: 10px 0px;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+
+label {
+        padding:5px 5px;
+	display: inline-block;
+	margin-bottom: 10px;
+	font-weight: bold;
+	width: 180px;
+	vertical-align: top;
+        font-family:sans-serif;
+}
+
+.element_wrap p {
+	display: inline-block;
+	margin:  0;
+	text-align: left;
+}
+
+label[for=contact_tel],
+label[for=contact_mail],
+label[for=exp_yes],
+label[for=exp_no] {
+	margin-right: 10px;
+	width: auto;
+	font-weight: normal;
+}
+
+textarea[name=other] {
+
+        -webkit-appearance:none;
+    
+	padding: 5px 10px;
+	width: 100%;
+	height: 100px;
+	font-size: 86%;
+	border: 2px solid #cdcdcd;
+	border-radius: 3px;
+	background: #ddf0ff;
+}
+
+.error_list {
+	padding: 10px 30px;
+	color: #ff2e5a;
+	font-size: 86%;
+	text-align: left;
+	border: 1px solid #ff2e5a;
+	border-radius: 5px;
+}
+
+
+
+
