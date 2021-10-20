@@ -35,7 +35,7 @@
       <header>
          <div class="inner">
             <div id="logo">
-               <div class="font_logo">
+               <div class="font_logo 123">
                   <font size="1">愛知許可第542771702500号</font><br>
                   TRUCKMAX
                   <br>
