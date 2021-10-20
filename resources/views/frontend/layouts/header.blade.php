@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
    <head>
       <title>@yield('title','トラック　買取り')</title>
+      <meta name="google-site-verification" content="rHQ5YbgYo2VkvhEARL87Bmsh2PsHAo6T7aZZz69HxFk" />
       <meta name="keywords" content="@yield('meta_keywords','トラック　買取り')">
       <meta name="description" content="@yield('meta_description','トラック、ダンプの買取なら、トラックマックスにご相談ください。')">
       <link rel="canonical" href="{{url()->current()}}"/>
