@@ -1,8 +1,6 @@
 @extends('layouts.master-without-nav')
 
-@section('title')
-    @lang('translation.Login') 2
-@endsection
+
 
 @section('css')
     <!-- owl.carousel css -->
