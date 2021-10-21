@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
    <head>
-      <title>@yield('title','トラック　買取り')</title>
+      <title>@yield('title','トラック　買取り | の買取りトラック・ダンプ | Truck Max')</title>
       <meta name="google-site-verification" content="rHQ5YbgYo2VkvhEARL87Bmsh2PsHAo6T7aZZz69HxFk" />
       <meta name="keywords" content="@yield('meta_keywords','トラック　買取り')">
-      <meta name="description" content="@yield('meta_description','トラック、ダンプの買取なら、トラックマックスにご相談ください。')">
+      <meta name="description" content="@yield('meta_description','もし あなたが 欲しい には トラック　買取り トラックマックスは、お客様から買い取った大切なトラックを、メカニックによる点検・修理を行い、次に必要とするお客様に安全にお渡しする日本一の工場です。')">
       <link rel="canonical" href="{{url()->current()}}"/>
       <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
       <meta name="keywords" content="トラック買取、ダンプ買取、故障車買取、事故車買取、">
@@ -22,6 +22,8 @@
       <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
       <![endif]-->
       <!-- Global site tag (gtag.js) - Google Ads: 970831163 -->
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210743207-1"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970831163"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
@@ -36,7 +38,7 @@
       <header>
          <div class="inner">
             <div id="logo">
-               <div class="font_logo 111">
+               <div class="font_logo">
                   <font size="1">愛知許可第542771702500号</font><br>
                   TRUCKMAX
                   <br>
@@ -49,3 +51,4 @@
          </div>
       </header>
       <!--▲ ヘッダー ▲-->
+      
