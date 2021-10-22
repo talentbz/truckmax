@@ -10,6 +10,15 @@
 
             gtag('config', 'UA-210743207-1');
         </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JTFC7X52S"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7JTFC7X52S');
+      </script>
       <title>@yield('title','トラック　買取り | の買取りトラック・ダンプ | Truck Max')</title>
       <meta name="google-site-verification" content="rHQ5YbgYo2VkvhEARL87Bmsh2PsHAo6T7aZZz69HxFk" />
       <meta name="keywords" content="@yield('meta_keywords','トラック　買取り')">
